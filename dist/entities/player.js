@@ -100,6 +100,11 @@ class Player extends baseentity_1.BaseEntity {
      * @returns Is this player fake (i.e. a bot)
      */
     get isFakePlayer() {
+        // @todo proper fix
+        // in some cases userInfo seems to be null
+        // this is most likely due to incorrect parsing of some demo files 
+        if (!this.userInfo)
+            return true;
         return this.userInfo.fakePlayer;
     }
     /**

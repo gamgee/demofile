@@ -189,8 +189,14 @@ class DemoFile extends events_1.EventEmitter {
     }
     _handleStringTables() {
         const chunk = readIBytes(this._bytebuf);
-        const bitbuf = bitbuffer_1.BitStream.from(chunk.buffer.slice(chunk.offset, chunk.limit));
-        this.stringTables.handleStringTables(bitbuf);
+        try {
+            const bitbuf = bitbuffer_1.BitStream.from(chunk.buffer.slice(chunk.offset, chunk.limit));
+            this.stringTables.handleStringTables(bitbuf);
+        }
+        catch (e) {
+            // @todo fix BitStream Error
+            console.log(e);
+        }
     }
     _recurse() {
         const now = Date.now();

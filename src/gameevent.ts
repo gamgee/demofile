@@ -4,6 +4,7 @@ import {
   CSVCMsg_GameEventList,
   ICSVCMsg_GameEvent
 } from "./protobufs/netmessages";
+import long = require("long");
 
 export class GameEvent {
   public name: string;
