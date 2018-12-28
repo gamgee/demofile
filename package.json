@@ -25,7 +25,7 @@
     "cp-declarations": "copyfiles -u 1 ./src/bit-buffer.d.ts ./src/pervasive.d.ts ./src/protobufs/cstrike15_usermessages.d.ts ./src/protobufs/netmessages.d.ts ./dist/"
   },
   "main": "dist/demo.js",
-  "types": "dist/demo.d.js",
+  "types": "dist/demo.d.ts",
   "dependencies": {
     "@types/bytebuffer": "^5.0.37",
     "@types/lodash": "^4.14.116",
